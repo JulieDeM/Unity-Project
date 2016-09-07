@@ -8,4 +8,9 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
+/*Form Route */
+router.get('/create-user', function(req, res, next){
+  res.render('form', {title: 'form page'})
+})
+
 module.exports = router;
