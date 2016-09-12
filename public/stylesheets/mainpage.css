@@ -3,7 +3,12 @@
   background-size: 100% 100%;
 }*/
 body{
-  background-color: #2AFFC2;
   margin: 0px;
   padding: 0px;
+}
+header{
+  height: 100px;
+  width: 100%;
+  background-color: #2AFFC2;
+  opacity: .5;
 }

@@ -1,19 +1,19 @@
 body{
-  background-color: #2AFFC2;
   margin: 0px;
   padding: 0px;
 }
-/*header{
+header{
   height: 100px;
   width: 100%;
-  background-color: black;
-}*/
+  background-color: #2AFFC2;
+  opacity: .5;
+}
 form{
   align-items: center;
 }
-.black{
+/*.black{
   height: 100px;
   width: 100%;
-  background-color: black;
+  background-color: #2AFFC2;
   opacity: 0.9;
-}
+}*/
