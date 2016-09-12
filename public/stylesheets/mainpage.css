@@ -1,3 +1,4 @@
 body{
-  background-image: image(../puzzle-main-image-placeholder.png);
+  background-image: url(/images/puzzle-main-image-placeholder.png);
+  background-size: 100% 100%;
 }
