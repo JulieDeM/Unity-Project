@@ -10,7 +10,7 @@ html
     div.blue
       h1
         | Before You can play set up a free account with Puzzletastic below to keep track of your scores.
-      form.form(method='post')
+      form.form(method='post' action='/new')
         | Enter User Name
         br
         input(type='text', name='name', value='', required='')

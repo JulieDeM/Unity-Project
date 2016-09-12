@@ -20,6 +20,14 @@ router.get('/create-user', function(req, res, next){
   })
 });
 
+router.post('/new', function(req,res,next){
+  queries.createUser(req.body.name, req.body.username, req.body.total_score, req.body.high_score).then(function(){
+    console.log(req.body.high_score);
+    console.log(req.body.name);
+    res.redirect('/')
+  })
+})
+
 /*Scores Route */
 // router.get('/scores', function(req, res, next){
 //   queries.scores().then(function(info){
