@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 var knex = require('../db/knex');
 var pg = require('pg');
-var queires = require('../lib/queries');
+var queries = require('../lib/queries');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -20,4 +20,13 @@ router.get('/create-user', function(req, res, next){
   })
 })
 
+router.get('/scores', function(req, res, next){
+  queries.scores().then(function(info){
+    res.render('scores', {
+      username: info.username,
+      totalscore: info.totalscore,
+      highScore: info.highScore
+    })
+  })
+})
 module.exports = router;
