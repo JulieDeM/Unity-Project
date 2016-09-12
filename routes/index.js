@@ -7,7 +7,9 @@ var queries = require('../lib/queries');
 /* GET home page. */
 router.get('/', function(req, res, next) {
   console.log("*************you have hit home");
-  res.render('index');
+  queries.scores().then(function(data){
+  res.render('index', {info: data.rows});
+  })
 });
 
 /*Form Route */

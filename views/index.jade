@@ -8,6 +8,17 @@ block content
   h1= title
   p Welcome to #{title}
   
+  table
+    tr
+      th User Name
+      th Total Score
+      th High Score
+    each user in info
+      tr
+        td #{user.username}
+        td #{user.total_score}
+        td #{user.high_score}
+  
   script.
     // This is called with the results from from FB.getLoginStatus().
     function statusChangeCallback(response) {
