@@ -2,15 +2,22 @@ var express = require('express');
 var router = express.Router();
 var knex = require('../db/knex');
 var pg = require('pg');
+var queires = require('../lib/queries');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  res.render('index');
 });
 
 /*Form Route */
 router.get('/create-user', function(req, res, next){
-  res.render('form', {title: 'form page'})
+  queries.getUserInfo(req.cookies.user).then(function(results) {
+    var user = results.rows[0]
+    res.render('form', {
+      name: user.name,
+      username: user.username
+    });
+  })
 })
 
 module.exports = router;
