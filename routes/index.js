@@ -11,22 +11,23 @@ router.get('/', function(req, res, next) {
 
 /*Form Route */
 router.get('/create-user', function(req, res, next){
-  queries.getUserInfo(req.cookies.user).then(function(results) {
-    var user = results.rows[0]
+  // queries.getUserInfo(req.cookies.user).then(function(results) {
+  //   var user = results.rows[0]
     res.render('form', {
-      name: user.name,
-      username: user.username
-    });
+      // name: user.name,
+      // username: user.username
+  //   });
   })
-})
+});
 
-router.get('/scores', function(req, res, next){
-  queries.scores().then(function(info){
-    res.render('scores', {
-      username: info.username,
-      totalscore: info.totalscore,
-      highScore: info.highScore
-    })
-  })
-})
+/*Scores Route */
+// router.get('/scores', function(req, res, next){
+//   queries.scores().then(function(info){
+//     res.render('scores', {
+//       username: info.username,
+//       totalscore: info.totalscore,
+//       highScore: info.highScore
+//     })
+//   })
+// })
 module.exports = router;

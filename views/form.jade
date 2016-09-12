@@ -3,16 +3,19 @@ html
   head
     meta(charset='utf-8')
     title
+    link(rel='stylesheet', href='stylesheets/form.css', media='screen', title='no title', charset='utf-8')
   body
     header
-    h1
-      | Before You can play set up a free account with Puzzletastic below to keep track of your scores.
-    form.form(method='post')
-      | Enter User Name
-      br
-      input(type='text', name='name', value='', required='')
-      input(type='text', name='name', value='0', hidden='')
-      input(type='text', name='name', value='0', hidden='')
-      br
-      input(type='submit', name='name', value="SUBMIT")
+      div.black
+    div.blue
+      h1
+        | Before You can play set up a free account with Puzzletastic below to keep track of your scores.
+      form.form(method='post')
+        | Enter User Name
+        br
+        input(type='text', name='name', value='', required='')
+        input(type='text', name='name', value='0', hidden='')
+        input(type='text', name='name', value='0', hidden='')
+        br
+        input(type='submit', name='name', value="SUBMIT")
     footer

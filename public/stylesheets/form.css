@@ -1,0 +1,19 @@
+body{
+  background-color: #2AFFC2;
+  margin: 0px;
+  padding: 0px;
+}
+/*header{
+  height: 100px;
+  width: 100%;
+  background-color: black;
+}*/
+form{
+  align-items: center;
+}
+.black{
+  height: 100px;
+  width: 100%;
+  background-color: black;
+  opacity: 0.9;
+}
