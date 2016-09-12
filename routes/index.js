@@ -6,6 +6,7 @@ var queries = require('../lib/queries');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
+  console.log("*************you have hit home");
   res.render('index');
 });
 
@@ -22,20 +23,15 @@ router.get('/create-user', function(req, res, next){
 
 router.post('/new', function(req,res,next){
   queries.createUser(req.body.name, req.body.username, req.body.total_score, req.body.high_score).then(function(){
-    console.log(req.body.high_score);
-    console.log(req.body.name);
     res.redirect('/')
   })
 })
 
 /*Scores Route */
 router.get('/scores', function(req, res, next){
-//   queries.scores().then(function(info){
-    res.render('scores', {
-//       username: info.username,
-//       totalscore: info.totalscore,
-//       highScore: info.highScore
-//     })
+  console.log("*******************you have hit the scores route");
+  queries.scores().then(function(data){
+    res.render('scores', {info: data.rows})
   })
 })
 

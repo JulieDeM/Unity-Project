@@ -8,8 +8,19 @@ header{
   background-color: #2AFFC2;
   opacity: .5;
 }
-form{
+.box{
+  background-color: #FFF5E7;
+  border: 1 black solid;
+  /*color:black;*/
+  font-weight:bold;
+  margin:120px auto;
+  height:60%;
+  width: 50%;
   align-items: center;
+}
+form{
+  margin: 10% 20% 30% 35%;
+  color: black;
 }
 /*.black{
   height: 100px;
