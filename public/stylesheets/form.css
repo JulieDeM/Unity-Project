@@ -9,17 +9,18 @@ header{
   opacity: .5;
 }
 .box{
-  background-color: #FFF5E7;
-  border: 1 black solid;
+  background-color: #E4E4E4;
+  border: 1px grey solid;
   /*color:black;*/
   font-weight:bold;
   margin:120px auto;
-  height:60%;
+  height:55%;
   width: 50%;
   align-items: center;
+  border-radius: 2%;
 }
 form{
-  margin: 10% 20% 30% 35%;
+  margin: 7% 20% 30% 35%;
   color: black;
 }
 /*.black{
@@ -28,3 +29,9 @@ form{
   background-color: #2AFFC2;
   opacity: 0.9;
 }*/
+footer{
+  height: 20px;
+  width: 100%;
+  background-color: grey;
+  opacity: 0.2;
+}
