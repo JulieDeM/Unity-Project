@@ -29,13 +29,14 @@ router.post('/new', function(req,res,next){
 })
 
 /*Scores Route */
-// router.get('/scores', function(req, res, next){
+router.get('/scores', function(req, res, next){
 //   queries.scores().then(function(info){
-//     res.render('scores', {
+    res.render('scores', {
 //       username: info.username,
 //       totalscore: info.totalscore,
 //       highScore: info.highScore
 //     })
-//   })
-// })
+  })
+})
+
 module.exports = router;
