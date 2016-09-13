@@ -39,11 +39,11 @@ router.get('/cube-collector', function(req,res,next){
 });
 
 router.get('/obsolete-robots', function(req,res,next){
-
+  res.render('obsoleterobots')
 });
 
 router.get('/cat-gems', function(req,res,next){
-
+  res.render('catsgems')
 })
 
 /*Form Route */

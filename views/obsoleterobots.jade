@@ -1,0 +1,31 @@
+extends layout
+
+block content
+  link(rel='stylesheet', href='sarah/obsoleterobotswebgl/TemplateData/style.css')
+  link(rel='shortcut icon', href='sarah/obsoleterobotswebgl/TemplateData/favicon.ico')
+  script(src='sarah/obsoleterobotswebgl/TemplateData/UnityProgress.js')
+  body.template
+    p.header
+      span Unity WebGL Player 
+      | 2013_10 - Sample Assets
+    .template-wrap.clear
+      canvas#canvas.emscripten(oncontextmenu='event.preventDefault()', height='600px', width='960px')
+      br
+      .logo
+      .fullscreen
+        img(src='sarah/obsoleterobotswebgl/TemplateData/fullscreen.png', width='38', height='38', alt='Fullscreen', title='Fullscreen', onclick='SetFullscreen(1);')
+      .title 2013_10 - Sample Assets
+    p.footer
+      | « created with 
+      a(href='http://unity3d.com/', title='Go to unity3d.com') Unity
+      |  »
+    script(type='text/javascript').
+      var Module = {
+      TOTAL_MEMORY: 268435456,
+      errorhandler: null,			// arguments: err, url, line. This function must return 'true' if the error is handled, otherwise 'false'
+      compatibilitycheck: null,
+      dataUrl: "sarah/obsoleterobotswebgl/Release/obsoleterobotswebgl.data",
+      codeUrl: "sarah/obsoleterobotswebgl/Release/obsoleterobotswebgl.js",
+      memUrl: "sarah/obsoleterobotswebgl/Release/obsoleterobotswebgl.mem",
+      };
+    script(src='sarah/obsoleterobotswebgl/Release/UnityLoader.js')
