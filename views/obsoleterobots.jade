@@ -3,15 +3,17 @@ extends layout
 block content
   link(rel='stylesheet', href='sarah/obsoleterobotswebgl/TemplateData/style.css')
   link(rel='shortcut icon', href='sarah/obsoleterobotswebgl/TemplateData/favicon.ico')
+  link(rel='stylesheet', href='stylesheets/form.css')
   script(src='sarah/obsoleterobotswebgl/TemplateData/UnityProgress.js')
   body.template
+    header
+      a(href='/') puzzletastic
     p.header
       span Unity WebGL Player 
       | 2013_10 - Sample Assets
     .template-wrap.clear
       canvas#canvas.emscripten(oncontextmenu='event.preventDefault()', height='600px', width='960px')
       br
-      .logo
       .fullscreen
         img(src='sarah/obsoleterobotswebgl/TemplateData/fullscreen.png', width='38', height='38', alt='Fullscreen', title='Fullscreen', onclick='SetFullscreen(1);')
       .title Obsolete Robots

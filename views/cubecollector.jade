@@ -1,19 +1,21 @@
 extends layout
 
 block content
-  link(rel='stylesheet', href='anna/puzzletastichopefullyworks/annasgame/TemplateData/style.css')
-  link(rel='shortcut icon', href='anna/puzzletastichopefullyworks/annasgame/TemplateData/favicon.ico')
-  script(src='anna/puzzletastichopefullyworks/annasgame/TemplateData/UnityProgress.js')
+  link(rel='stylesheet', href='anna/annasGame/TemplateData/style.css')
+  link(rel='shortcut icon', href='anna/annasGame/TemplateData/favicon.ico')
+  link(rel='stylesheet', href='stylesheets/form.css')
+  script(src='anna/annasGame/TemplateData/UnityProgress.js')
   body.template
+    header
+      a(href='/') puzzletastic
     p.header
       span Unity WebGL Player 
       | Cube Collector
     .template-wrap.clear
       canvas#canvas.emscripten(oncontextmenu='event.preventDefault()', height='600px', width='960px')
       br
-      .logo
       .fullscreen
-        img(src='anna/puzzletastichopefullyworks/annasgame/TemplateData/fullscreen.png', width='38', height='38', alt='Fullscreen', title='Fullscreen', onclick='SetFullscreen(1);')
+        img(src='anna/annasGame/TemplateData/fullscreen.png', width='38', height='38', alt='Fullscreen', title='Fullscreen', onclick='SetFullscreen(1);')
       .title Cube Collector
     p.footer
       | « created with 
@@ -24,8 +26,8 @@ block content
       TOTAL_MEMORY: 268435456,
       errorhandler: null,			// arguments: err, url, line. This function must return 'true' if the error is handled, otherwise 'false'
       compatibilitycheck: null,
-      dataUrl: "anna/puzzletastichopefullyworks/annasgame/Release/puzzletastichopefullyworks.data",
-      codeUrl: "anna/puzzletastichopefullyworks/annasgame/Release/puzzletastichopefullyworks.js",
-      memUrl: "anna/puzzletastichopefullyworks/annasgame/Release/puzzletastichopefullyworks.mem",
+      dataUrl: "anna/annasGame/Release/cubeCollector.data",
+      codeUrl: "anna/annasGame/Release/cubeCollector.js",
+      memUrl: "anna/annasGame/Release/cubeCollector.mem",
       };
-    script(src='anna/puzzletastichopefullyworks/annasgame/Release/UnityLoader.js')
+    script(src='anna/annasGame/Release/UnityLoader.js')

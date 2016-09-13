@@ -37,15 +37,18 @@ a{
   width: 32%;
   height: 100%;
   background-repeat: no-repeat;
-  /*background-size: contain;*/
   background-size: cover;
   font-size: 1.25em;
   text-align: center;
 }
-.gameImages div p{
+.gameImages div a{
   background: gainsboro;
   opacity: 0.5;
   margin-top: 39%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  text-decoration: none;
 }
 .julieGame{
   background-image: url('/images/cat-game.png');
