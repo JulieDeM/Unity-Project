@@ -32,6 +32,7 @@ passport.use(new FacebookStrategy({
     clientSecret: process.env.FACEBOOK_CLIENT_SECRET,
     callbackURL: "/auth/facebook/callback",
     redirect: false,
+    enableProof: true,
     profileFields: ['id', 'name']
   },
   function(token, tokenSecret, profile, done) {
