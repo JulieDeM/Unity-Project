@@ -35,6 +35,19 @@ router.get('/loggedin', function(req,res,next){
 
 })
 
+
+router.get('/cube-collector', function(req,res,next){
+
+});
+
+router.get('/obsolete-robots', function(req,res,next){
+
+});
+
+router.get('/cat-gems', function(req,res,next){
+
+})
+
 /*Form Route */
 router.get('/create-user', function(req, res, next){
   queries.getUserInfo().then(function(results) {

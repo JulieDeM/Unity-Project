@@ -1,4 +1,5 @@
 require('dotenv').config();
+require('config/auth')(passport);
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
@@ -9,6 +10,8 @@ var bodyParser = require('body-parser');
 var routes = require('./routes/index');
 var users = require('./routes/users');
 var passport = require('passport');
+// var config = require('/config/auth');
+var FacebookStrategy = require('passport-facebook').Strategy;
 
 var app = express();
 
