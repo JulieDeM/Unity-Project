@@ -5,16 +5,16 @@ block content
   link(href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700" rel="stylesheet")
   body
   header puzzletastic
-  a(href='#') logout
+  a(href='/logout') logout
   a(href='/auth/facebook') login
   .gameDetails
     .gameImages
       .julieGame
-        p CATch'em gems
+        a(href='/cat-gems') CATch'em gems
       .sarahGame
-        p obsolete robots
+        a(href='/obsolete-robots') obsolete robots
       .annaGame
-        p cube collector
+        a(href='/cube-collector') cube collector
     .gameDescriptions
       .julieDesc
         p a game where you control a cat by walking, running, and jumping to collect all the gems in the backyard to win the game!
