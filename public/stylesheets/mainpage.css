@@ -1,15 +1,114 @@
 body{
+  font-family: 'Lato', sans-serif;
   margin: 0px;
   padding: 0px;
+  background: #f4f4f4;
 }
 header{
-  height: 100px;
+  height: 18vh;
   width: 100%;
   background-color: #2AFFC2;
   opacity: .5;
+  color: white;
+  font-weight: 300;
+  font-size: 4.5em;
+  text-align: center;
+  line-height: 2.5em;
+  letter-spacing: 0.4em;
+}
+header p{
+  font-size: 0.25em;
+  font-weight: 300;
+  letter-spacing: normal;
+  line-height: normal;
+  margin-left: 85%;
+  margin-top: -13%;
+  letter-spacing: 0.1em;
+}
+.gameDetails{
+  margin-top: 8%;
+  display: flex;
+  align-content: center;
+  flex-direction: column;
+}
+.gameImages{
+  width: 100%;
+  height: 25vh;
+  display: flex;
+  justify-content: space-around;
+}
+.gameImages div{
+  width: 32%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  font-size: 1.25em;
+}
+.julieGame{
+  background-image: url('/images/cat-game.png');
+  text-align: center;
+}
+.julieGame p{
+  background: gainsboro;
+  opacity: 0.5;
+  margin-top: 38%;
+}
+.sarahGame{
+  background-image: url('/images/decommissioned.png');
+  text-align: center;
+}
+.sarahGame p{
+  background: gainsboro;
+  opacity: 0.5;
+  margin-top: 38%;
+}
+.annaGame{
+  background-image: url('/images/cube-collector.png');
+  text-align: center;
+}
+.annaGame p{
+  background: gainsboro;
+  opacity: 0.5;
+  margin-top: 38%;
+}
+.gameDescriptions{
+  width: 100%;
+  height: 15vh;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1%;
+}
+.gameDescriptions div{
+  width: 32%;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+.julieDesc{
+  display: flex;
+  flex-wrap: wrap;
+}
+.sarahDesc{
+  display: flex;
+  flex-wrap: wrap;
+}
+.annaDesc{
+  display: flex;
+  flex-wrap: wrap;
 }
 table{
   border: 2px solid grey;
-  font-size: 20px;
-  font-family: sans-serif;
+  background: white;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5%;
+}
+th{
+  font-size: 1.5em;
+  border-bottom: 2px solid grey;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+td{
+  font-size: 1.25em;
+  text-align: center;
 }
