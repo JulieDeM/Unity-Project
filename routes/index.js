@@ -14,7 +14,13 @@ router.get('/auth/facebook', passport.authenticate('facebook',{
 router.get('/auth/facebook/callback',
   passport.authenticate('facebook', { failureRedirect: '/login' }),
   function(req, res) {
-    res.redirect('/');
+    queries.getUserInfo().then(function(username){
+      if(username.username == undefined || null){
+        res.redirect('/create-user')
+      } else{
+        res.redirect('/');
+      }
+    })
   });
 // }
 
@@ -34,7 +40,7 @@ router.get('/loggedin', function(req,res,next){
 })
 
 router.get('/logout', function(req, res, next){
-  
+
 })
 
 router.get('/cube-collector', function(req,res,next){
