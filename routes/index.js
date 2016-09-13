@@ -35,7 +35,7 @@ router.get('/loggedin', function(req,res,next){
 
 
 router.get('/cube-collector', function(req,res,next){
-
+  res.render('cubecollector')
 });
 
 router.get('/obsolete-robots', function(req,res,next){
