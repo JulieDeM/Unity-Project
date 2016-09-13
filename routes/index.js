@@ -30,7 +30,7 @@ router.get('/auth/facebook/callback',
 router.get('/', function(req, res, next) {
   queries.scores().then(function(data){
     console.log(data);
-  res.render('index', {info: data.rows});
+  res.render('annaHomepage', {info: data.rows});
   })
 });
 
