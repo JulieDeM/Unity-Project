@@ -1,21 +1,17 @@
-doctype html
-html
-  head
-    meta(charset='utf-8')
-    title
-    link(rel='stylesheet', href='stylesheets/form.css', media='screen', title='no title', charset='utf-8')
+extends layout
+
+block content
+  link(rel='stylesheet', href='/stylesheets/form.css', media='screen', title='no title', charset='utf-8')
+  link(href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700" rel="stylesheet")
   body
-    header
-    div.box
-      h1
-        | Before You can play set up a free account with Puzzletastic below to keep track of your scores.
+    header puzzletastic
+    .box
+      p before playing, set up a free account with puzzletastic below to keep track of your scores.
+      p.enter enter user name:
       form.form(method='post' action='/new')
-        | Enter User Name
-        br
         input(type='text', name='name', value=#{response.name}, hidden='')
         input(type='text', name='username', value="", required='')
         input(type='text', name='total_score', value='0', hidden='')
         input(type='text', name='high_score', value='0', hidden='')
         br
-        input(type='submit', name='submit', value="SUBMIT")
-    footer
+        input(type='submit', name='submit', value="submit")
