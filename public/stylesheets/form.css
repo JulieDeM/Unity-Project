@@ -17,6 +17,11 @@ header{
   line-height: 2.5em;
   letter-spacing: 0.4em;
 }
+header a{
+  text-decoration: none;
+  color: white;
+  font-weight: 200;
+}
 .box{
   background-color: white;
   border: 2px grey solid;
