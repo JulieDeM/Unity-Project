@@ -14,7 +14,7 @@ router.get('/auth/facebook', passport.authenticate('facebook',{
 router.get('/auth/facebook/callback',
   passport.authenticate('facebook', { failureRedirect: '/login' }),
   function(req, res) {
-    queries.getUserInfo().then(function(username){
+    queries.getUserInfo(req.body.username).then(function(username){
       if(username.username == undefined || null){
         res.redirect('/create-user')
       } else{
@@ -67,7 +67,7 @@ router.get('/create-user', function(req, res, next){
 });
 
 router.post('/new', function(req,res,next){
-  queries.createUser(req.body.name, req.body.username, req.body.total_score, req.body.high_score).then(function(){
+  queries.createUser(req.body.username, req.body.total_score, req.body.high_score, req.body.fb_id).then(function(){
     res.redirect('/')
   })
 });
