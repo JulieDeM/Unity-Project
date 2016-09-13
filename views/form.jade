@@ -9,7 +9,6 @@ block content
       p before playing, set up a free account with puzzletastic below to keep track of your scores.
       p.enter enter user name:
       form.form(method='post' action='/new')
-        input(type='text', name='name', value=#{response.name}, hidden='')
         input(type='text', name='username', value="", required='')
         input(type='text', name='total_score', value='0', hidden='')
         input(type='text', name='high_score', value='0', hidden='')
