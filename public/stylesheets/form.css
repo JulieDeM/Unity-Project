@@ -19,20 +19,25 @@ header{
 }
 .box{
   background-color: white;
-  border: 1px grey solid;
-  font-weight:bold;
-  margin:120px auto;
+  border: 2px grey solid;
   height:55%;
   width: 50%;
   align-items: center;
-  border-radius: 2%;
   text-align: center;
   padding: 2%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10%;
 }
 .box p{
   margin-top: 5%;
   font-size: 1.5em;
   font-weight: 300;
+}
+.box p:nth-child(odd){
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
 }
 .box p:nth-child(even){
   font-size: 1.25em;
