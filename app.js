@@ -47,6 +47,15 @@ passport.use(new FacebookStrategy({
   }
 ));
 
+
+passport.serializeUser(function(user, done) {
+  done(null, user);
+});
+
+passport.deserializeUser(function(user, done) {
+  done(null, user);
+});
+
 app.use('/', routes);
 app.use('/users', users);
 
