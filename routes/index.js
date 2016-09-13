@@ -52,7 +52,11 @@ router.get('/obsolete-robots', function(req,res,next){
 });
 
 router.get('/cat-gems', function(req,res,next){
-  res.render('catsgems')
+  queries.userScore().then(function(userscoress){
+    console.log(userscoress);
+    res.render('catsgems', { userscoress: userscoress})
+
+  })
 })
 
 /*Form Route */
