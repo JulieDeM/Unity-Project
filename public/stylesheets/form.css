@@ -20,18 +20,18 @@ header{
   border-radius: 2%;
 }
 form{
-  margin: 7% 20% 30% 35%;
+  margin: 5% 20% 25% 35%;
   color: black;
 }
-/*.black{
+.black{
   height: 100px;
   width: 100%;
   background-color: #2AFFC2;
   opacity: 0.9;
-}*/
+}
 footer{
   height: 20px;
   width: 100%;
-  background-color: grey;
+  background-color: darkgrey;
   opacity: 0.2;
 }
