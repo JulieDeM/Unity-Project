@@ -24,7 +24,7 @@ router.get('/auth/facebook/callback',
 router.get('/', function(req, res, next) {
   queries.scores().then(function(data){
     console.log(data);
-  res.render('index', {info: data.rows});
+  res.render('annaHomepage', {info: data.rows});
   })
 });
 
@@ -34,7 +34,7 @@ router.get('/loggedin', function(req,res,next){
 })
 
 router.get('/logout', function(req, res, next){
-  
+
 })
 
 router.get('/cube-collector', function(req,res,next){
