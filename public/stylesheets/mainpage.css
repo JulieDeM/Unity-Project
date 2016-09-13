@@ -16,14 +16,10 @@ header{
   line-height: 2.5em;
   letter-spacing: 0.4em;
 }
-header p{
-  font-size: 0.25em;
-  font-weight: 300;
-  letter-spacing: normal;
-  line-height: normal;
-  margin-left: 85%;
-  margin-top: -13%;
-  letter-spacing: 0.1em;
+a{
+  float: right;
+  margin-right: 2%;
+  color: #303030;
 }
 .gameDetails{
   margin-top: 8%;
@@ -39,15 +35,17 @@ header p{
 }
 .gameImages div{
   width: 32%;
+  height: 100%;
   background-repeat: no-repeat;
-  background-size: contain;
+  /*background-size: contain;*/
+  background-size: cover;
   font-size: 1.25em;
   text-align: center;
 }
 .gameImages div p{
   background: gainsboro;
   opacity: 0.5;
-  margin-top: 38%;
+  margin-top: 39%;
 }
 .julieGame{
   background-image: url('/images/cat-game.png');
