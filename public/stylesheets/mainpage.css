@@ -1,7 +1,7 @@
 body{
   font-family: 'Lato', sans-serif;
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
   background: #f4f4f4;
 }
 header{
@@ -42,33 +42,21 @@ header p{
   background-repeat: no-repeat;
   background-size: contain;
   font-size: 1.25em;
+  text-align: center;
+}
+.gameImages div p{
+  background: gainsboro;
+  opacity: 0.5;
+  margin-top: 38%;
 }
 .julieGame{
   background-image: url('/images/cat-game.png');
-  text-align: center;
-}
-.julieGame p{
-  background: gainsboro;
-  opacity: 0.5;
-  margin-top: 38%;
 }
 .sarahGame{
   background-image: url('/images/decommissioned.png');
-  text-align: center;
-}
-.sarahGame p{
-  background: gainsboro;
-  opacity: 0.5;
-  margin-top: 38%;
 }
 .annaGame{
   background-image: url('/images/cube-collector.png');
-  text-align: center;
-}
-.annaGame p{
-  background: gainsboro;
-  opacity: 0.5;
-  margin-top: 38%;
 }
 .gameDescriptions{
   width: 100%;
@@ -76,31 +64,27 @@ header p{
   display: flex;
   justify-content: space-around;
   margin-top: 1%;
+  color: #303030;
 }
 .gameDescriptions div{
   width: 32%;
   padding-left: 2%;
   padding-right: 2%;
 }
-.julieDesc{
+.gameDescriptions div p{
   display: flex;
   flex-wrap: wrap;
-}
-.sarahDesc{
-  display: flex;
-  flex-wrap: wrap;
-}
-.annaDesc{
-  display: flex;
-  flex-wrap: wrap;
+  font-size: 1.05em;
 }
 table{
   border: 2px solid grey;
   background: white;
+  color: #303030;
   width: 50%;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 5%;
+  margin-top: 2%;
 }
 th{
   font-size: 1.5em;
