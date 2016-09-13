@@ -9,7 +9,9 @@ var app = require('../app');
 // module.exports = function(app, passport){
 
 /*login route */
-router.get('/auth/facebook', passport.authenticate('facebook'));
+router.get('/auth/facebook', passport.authenticate('facebook',{
+    scope: 'public_profile'
+}));
 
 router.get('/auth/facebook/callback',
   passport.authenticate('facebook', { failureRedirect: '/login' }),

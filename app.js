@@ -1,5 +1,4 @@
 require('dotenv').config();
-require('config/auth')(passport);
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
@@ -9,9 +8,8 @@ var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
-var passport = require('passport');
-// var config = require('/config/auth');
 var FacebookStrategy = require('passport-facebook').Strategy;
+var passport = require('passport');
 
 var app = express();
 
@@ -29,6 +27,26 @@ app.use(express.static(path.join(__dirname, 'public')));
 // app.use(express.session({secret: 'keyboard cat'}));
 // app.use(passport.initialize());
 // app.use(passport.session());
+
+passport.use(new FacebookStrategy({
+    clientID: process.env.FACEBOOK_CLIENT_ID,
+    clientSecret: process.env.FACEBOOK_CLIENT_SECRET,
+    callbackURL: "/auth/facebook/callback",
+    redirect: false,
+    profileFields: ['id', 'name']
+  },
+  function(token, tokenSecret, profile, done) {
+    Signup.findUser(profile).then(function(user){
+     if (user.rows.length !== 0) {
+        done(null, profile);
+      } else {
+       Signup.addUser(profile).then(function(){
+         done(null, profile);
+       })
+     }
+    })
+  }
+));
 
 app.use('/', routes);
 app.use('/users', users);
