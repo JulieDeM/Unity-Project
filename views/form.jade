@@ -12,7 +12,6 @@ html
       form.form(method='post' action='/new')
         | Enter User Name
         br
-        input(type='text', name='name', value=#{response.name}, hidden='')
         input(type='text', name='username', value="", required='')
         input(type='text', name='total_score', value='0', hidden='')
         input(type='text', name='high_score', value='0', hidden='')

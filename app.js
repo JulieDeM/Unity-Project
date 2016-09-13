@@ -10,6 +10,7 @@ var routes = require('./routes/index');
 var users = require('./routes/users');
 var FacebookStrategy = require('passport-facebook').Strategy;
 var passport = require('passport');
+var queries = require('./lib/queries');
 
 var app = express();
 
@@ -24,9 +25,9 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-// app.use(express.session({secret: 'keyboard cat'}));
-// app.use(passport.initialize());
-// app.use(passport.session());
+app.use(express.session({secret: 'keyboard cat'}));
+app.use(passport.initialize());
+app.use(passport.session());
 
 passport.use(new FacebookStrategy({
     clientID: process.env.FACEBOOK_CLIENT_ID,
@@ -36,11 +37,11 @@ passport.use(new FacebookStrategy({
     profileFields: ['id', 'name']
   },
   function(token, tokenSecret, profile, done) {
-    Signup.findUser(profile).then(function(user){
+    queries.getfbuser(profile).then(function(user){
      if (user.rows.length !== 0) {
         done(null, profile);
       } else {
-       Signup.addUser(profile).then(function(){
+       queries.createfbinfo(profile).then(function(){
          done(null, profile);
        })
      }
